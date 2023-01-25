@@ -21,12 +21,11 @@
     <label for="plot">Plot</label>
     <textarea id="plot" name="plot" rows="5">{{movie.plot}}</textarea>
   </div>
-
   <div>
     <label for="cast">Cast</label>
     <select name="cast" id="cast" multiple>
       {{#each celebrities as |celebrity|}}
-        <option value="{{celebrity.id}}">
+        <option value="{{celebrity.id}}" {{isOptionSelected ../movie.cast}}>
           {{celebrity.name}}
         </option>
       {{/each}}
